@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="omgimbot.app.sidangapps">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="omgimbot.app.lsmapps.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <meta-data
+            android:name="omgimbot.app.lsmapps.network.UnsafeOkHttpClient"
+            android:value="AppGlideModule" />
+        <activity android:name="omgimbot.app.lsmapps.features.materi.ContentMateriActivity"></activity>
+        <activity android:name="omgimbot.app.lsmapps.features.soal.SoalActivity" />
+        <activity android:name="omgimbot.app.lsmapps.features.nilai.NilaiActivity" />
+        <activity android:name="omgimbot.app.lsmapps.features.ujian.UjianActivity" />
+        <activity android:name="omgimbot.app.lsmapps.features.materi.MateriActivity" />
+        <activity android:name="omgimbot.app.lsmapps.features.dashboard.DashboardActivity" />
+        <activity android:name="omgimbot.app.lsmapps.features.auth.regist.RegisterActivity" />
+        <activity
+            android:name="omgimbot.app.lsmapps.features.auth.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSubs"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
